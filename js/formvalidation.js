@@ -1,21 +1,27 @@
 const stepInfo = [
   {
-    title: "Personal Details",
+    title: "Income Details",
     subtitle: "Next:Financial Details",
     progress: "30",
-    step:"1/3"
+    step:"1/4"
   },
   {
-    title: "Financial Details",
-    subtitle: "Next:Insurance Details",
-    progress: "60",
-    step: "2/3"
+    title: "Deduction Details",
+    subtitle: "Next:Deduction Details",
+    progress: "50",
+    step: "2/4"
   },
   {
-    title: "Insurance Details",
+    title: "Deduction Details",
+    subtitle: "Next:Result",
+    progress: "80",
+    step: "3/4"
+  },
+  {
+    title: "Result",
     subtitle: "",
     progress: "100",
-    step: "3/3"
+    step: "4/4"
   },
 ];
 $(document).ready(function(){
@@ -62,39 +68,49 @@ $("input[type=radio][name=radio-saving]").change(function () {
 // check Validation for step one
 function checkValidationStepOne() {
   let validat = true;
-  var nameVal = document.forms["hlvform"]["fullname"].value;
-  if (nameVal == "") {
-      document.getElementById('nameError').textContent = "Please enter your name";
-      document.forms["hlvform"]["fullname"].focus()
-      validat = false;
-  }
+
   let ageinput = document.forms["hlvform"]["ageinput"].value.trim();
   if (ageinput == 0) {
     document.getElementById("ageError").innerHTML = "Please select.";
     validat = false;
   }
-  let dreamselect = document.forms["hlvform"]["retiage"].value.trim();
-  if (dreamselect == 0) {
-    document.getElementById("retiageError").innerHTML = "Please select.";
+  let taxableIncome = document.forms["hlvform"]["taxableIncome"].value.trim();
+  if (taxableIncome == "") {
+    document.getElementById("taxableIncomeError").innerHTML = "Please enter amount.";
     validat = false;
   }
   return validat;
 }
 function checkValidationStepTwo() {
   let validat = true;
-  let edurate = document.forms["hlvform"]["saved"].value.trim();
-  if (edurate == "") {
-    document.getElementById("savedError").innerHTML = "Please enter amount.";
+  let lifeInsu = document.forms["hlvform"]["lifeInsu"].value.trim();
+  if (lifeInsu == "") {
+    document.getElementById("lifeInsuError").innerHTML = "Please enter amount.";
     validat = false;
   }
-  let savetill = document.forms["hlvform"]["retirement"].value.trim();
-  if (savetill == "") {
-    document.getElementById("retirementError").innerHTML = "Please enter amount.";
+  let sumLifeInsu = document.forms["hlvform"]["sumLifeInsu"].value.trim();
+  if (sumLifeInsu == "") {
+    document.getElementById("sumLifeInsuError").innerHTML = "Please enter amount.";
     validat = false;
   }
-  let expenses = document.forms["hlvform"]["expenses"].value.trim();
-  if (expenses == "") {
-    document.getElementById("expensesError").innerHTML = "Please enter amount.";
+  let lifeInsuAfter = document.forms["hlvform"]["lifeInsuAfter"].value.trim();
+  if (lifeInsuAfter == "") {
+    document.getElementById("lifeInsuAfterError").innerHTML = "Please enter amount.";
+    validat = false;
+  }
+  let sumLifeInsuAfter = document.forms["hlvform"]["sumLifeInsuAfter"].value.trim();
+  if (sumLifeInsuAfter == "") {
+    document.getElementById("lifeInsuAfterError").innerHTML = "Please enter amount.";
+    validat = false;
+  }
+  let annuityPlan = document.forms["hlvform"]["annuityPlan"].value.trim();
+  if (annuityPlan == "") {
+    document.getElementById("annuityPlanError").innerHTML = "Please enter amount.";
+    validat = false;
+  }
+  let empProvi = document.forms["hlvform"]["empProvi"].value.trim();
+  if (empProvi == "") {
+    document.getElementById("empProviError").innerHTML = "Please enter amount.";
     validat = false;
   }
   
