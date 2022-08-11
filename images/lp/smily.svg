@@ -1,0 +1,11 @@
+<svg id="Group_7963" data-name="Group 7963" xmlns="http://www.w3.org/2000/svg" width="37.204" height="47.234" viewBox="0 0 37.204 47.234">
+  <g id="Group_7953" data-name="Group 7953" transform="translate(0 0)">
+    <rect id="Rectangle_2339" data-name="Rectangle 2339" width="37.204" height="37.204" rx="8" fill="#fce200"/>
+    <path id="Path_10935" data-name="Path 10935" d="M37.892,13.938a24.842,24.842,0,0,1-20.98,11.045c-9.372,0-11.1-1.691-15.46-4.277a12.954,12.954,0,0,0,12.183,8.557h11.31A12.947,12.947,0,0,0,37.892,16.316Z" transform="translate(-0.688 7.941)" fill="#f4bf2f"/>
+    <g id="Group_7952" data-name="Group 7952" transform="translate(7.085 9.896)">
+      <path id="Path_10945" data-name="Path 10945" d="M25.439,24.5a2.553,2.553,0,1,1-2.549-2.687A2.627,2.627,0,0,1,25.439,24.5Zm17.935,0a2.553,2.553,0,1,1-2.549-2.687A2.627,2.627,0,0,1,43.374,24.5Z" transform="translate(-20.34 -21.81)" fill="#864e20"/>
+    </g>
+    <path id="Path_11155" data-name="Path 11155" d="M12.848,23.757c5.794,4.337,9.809,2.86,12.5.357a13.148,13.148,0,0,0,2.91-4.364" transform="translate(4.256 -3.025) rotate(14)" fill="none" stroke="#864e20" stroke-width="2"/>
+  </g>
+  <ellipse id="XMLID_7249_" cx="18.602" cy="1.744" rx="18.602" ry="1.744" transform="translate(0 43.747)" fill="#45413c" opacity="0.296"/>
+</svg>
