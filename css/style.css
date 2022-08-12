@@ -206,7 +206,7 @@ input#datepicker{padding-left:33px;font-size:16px;padding-right:15px}
 .form-wizard .form-wizard-previous-btn{background-color:transparent;color:#40329a;font-size:12px;font-weight:400;height:auto;line-height:initial;margin-top:15px;text-transform:capitalize}
 .form-wizard .form-control{font-weight:400;height:48px!important;color:rgba(0,0,0,.4);background-color:#fff;border:none;width:100%;box-sizing:border-box;border-radius:8px;line-height:48px;padding-left:15px;font-size:18px;outline:0;box-shadow:0 0 20px 0 rgb(0 0 0 / 9%)}
 .text-color{background-size:8px 10px;background:#fff url(../images/lp/arrow-down-new.png) no-repeat right .75rem center;line-height:36px!important}
-.form-group span{text-align:left;display:inherit;font-size:20px;color:#2b2b2b;line-height:20px;margin:0 0 13px}
+.form-group span, .form-group label{text-align:left;display:inherit;font-size:16px;color:#2b2b2b;line-height:20px;margin:0 0 13px}
 .form-wizard .form-control.phone-no{padding-left:56px}
 span.prefix-contry-code{position:absolute;top:50%;transform:translateY(-50%);left:15px;background:#fff;display:inline-block;padding-right:9px;font:normal normal normal 18px/22px Lato;color:#000}
 .from-radio{background:#fff;border-radius:30px;padding:7px;float:left}
@@ -451,7 +451,7 @@ img.ui-datepicker-trigger{top:45px!important}
 .box.box-insurance-blue .graph{padding: 0 0;order:1;margin:0 auto}
 .box.box-insurance-blue .wallet{order:2;justify-content:end;width:100%;margin-top:0}
 .box-insurance-blue .wallet img{margin-right:17px;padding-bottom:12px}
-.box.box-insurance .form-wizard .form-group span{width:auto;padding:14px 0}
+.box.box-insurance .form-wizard .form-group span, .box.box-insurance .form-wizard .form-group label{width:auto;padding:14px 0}
 .box.box-insurance .form-wizard .form-group .from-radio{float:right}
 .box.box-edit-blue{flex-direction:column;min-height:288px;padding:0 13px}
 .box-edit-blue h1{text-align:center;color:#fff;text-transform:capitalize;margin:0;padding:15px 0 8px;font:normal normal 600 20px/22px Lato}
@@ -502,7 +502,7 @@ img.ui-datepicker-trigger{top:45px!important}
 .finance-detail,.new-step .form-wizard{padding:0 0 22px;border-bottom:none}
 .form-wizard .form-control{font-size:16px;line-height:19px;height:45px}
 .form-wizard .form-control::placeholder{font-size:16px}
-.form-group span{font-size:13px;line-height:18px;margin:7px 0;}
+.form-group span , .form-group label{font-size:13px;line-height:18px;margin:7px 0;}
 .detail-form-rgt .rt{max-width:152px}
 .detail-form-rgt .form-group.rt{float:left;margin-left:28px}
 .detail-form-rgt .form-group.rt .from-radio{max-width:151px}
@@ -536,7 +536,7 @@ img.ui-datepicker-trigger{top:35px!important;width:18px}
 .box.box-insurance-blue .graph{margin-right:0}
 .graph.graph-edit.finance-garph{margin:0 auto; flex-direction: column;}
 .box-blue.box-insurance-blue .wallet img{width:129px;float:none;margin-right:17px;padding-bottom:12px;margin-left:auto;margin-right:0}
-.box.box-insurance .form-wizard .form-group span{width:auto;padding:13px 0}
+.box.box-insurance .form-wizard .form-group span ,.box.box-insurance .form-wizard .form-group label{width:auto;padding:13px 0}
 .box-insurance .finance-card{padding:14px 14px 14px;margin-bottom:0}
 .box-insurance .income-lable p:first-child{font-size:14px;line-height:17px;margin-bottom:4px}
 .box-insurance .income-lable p:nth-child(2){font-size:12px;line-height:15px;overflow:auto}
