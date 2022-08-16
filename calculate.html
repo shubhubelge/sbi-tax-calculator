@@ -71,7 +71,7 @@
             </div>
           </div>
           <form name="hlvform" class="stepform" action="" method="post">
-            <fieldset class="sf-step d-none" id="sf-step1">
+            <fieldset class="sf-step " id="sf-step1">
               <div class="new-step clearfix">
                 <div class="form-wizard padding-bottom-tree">
                   <div class="detail-form clearfix">
@@ -120,14 +120,14 @@
                         <label role="label" for="lifeInsu">Life Insurance Premiums for policy issued before 1April2012 (for yourself, your spouse or your children)*</label>
                         <div class="pos-relative input-icon">
                             <i class="symbole">₹</i>
-                            <input type="tel" class="form-control wizard-required effect-9" id="lifeInsu"
-                            onkeypress="return AllowOnlyNumbers(event);" autocomplete="off"
+                            <input type="tel" class="form-control wizard-required effect-9 display-sub" id="lifeInsu"
+                            onkeypress="return AllowOnlyNumbers(event);" oninput="checkInput('lifeInsu')" autocomplete="off"
                             placeholder="Enter the amount." />
                             <span class="errorMsg" id="lifeInsuError"><i></i> </span>
                         </div>
                         <div class="wizard-form-error"></div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group child-ele di-none" id="lifeInsuHide">
                         <label for="sumLifeInsu">- Total Sum Assured Amount for policy issued before 1April2012 (Rs)*</label>
                         <div class="pos-relative input-icon">
                             <i class="symbole">₹</i>
@@ -139,17 +139,17 @@
                         <div class="wizard-form-error"></div>
                     </div>
                     <div class="form-group">
-                        <span>Life Insurance Premiums for policy issued after 1April2012 (for yourself, your spouse or your children) (Rs)*</span>
+                        <label for="lifeInsuAfter">Life Insurance Premiums for policy issued after 1April2012 (for yourself, your spouse or your children) (Rs)*</label>
                         <div class="pos-relative input-icon">
                             <i class="symbole">₹</i>
                             <input type="tel" class="form-control wizard-required effect-9" id="lifeInsuAfter"
-                            onkeypress="return AllowOnlyNumbers(event);" autocomplete="off"
+                            onkeypress="return AllowOnlyNumbers(event);" oninput="checkInput('lifeInsuAfter')" autocomplete="off"
                             placeholder="Enter the amount." />
                             <span class="errorMsg" id="lifeInsuAfterError"><i></i> </span>
                         </div>
                         <div class="wizard-form-error"></div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group child-ele di-none" id="lifeInsuAfterHide">
                         <span>- Total Sum Assured Amount for policy issued after 1April2012 (Rs)*</span>
                         <div class="pos-relative input-icon">
                             <i class="symbole">₹</i>
@@ -255,7 +255,7 @@
               </div>
               <br />
             </fieldset>
-            <fieldset class="sf-step" id="sf-step3">
+            <fieldset class="sf-step d-none" id="sf-step3">
               <div class="finance-detail clearfix d-flex">
                 <div class="detail-form-lft fltl">
                     <div class="form-group">
@@ -302,7 +302,6 @@
                         </div>
                         <div class="wizard-form-error"></div>
                     </div>
-                    
                 </div>
                 <div class="detail-form-rgt fltl">
                     <div class="form-group">
@@ -328,36 +327,13 @@
                         <div class="wizard-form-error"></div>
                     </div>
                     <div class="form-group">
-                        <span>- Senior Citizen Savings Scheme 2004 (SCSS) (Rs)*</span>
+                        <label>Self Contribution to National Pension System (NPS) and Atal Pension Yojana (APY) under section 80CCD. (Rs)</label>
                         <div class="pos-relative input-icon">
                         <i class="symbole">₹</i>
-                        <input type="tel" class="form-control wizard-required effect-9" id="scss"
+                        <input type="tel" class="form-control wizard-required effect-9" id="nps"
                             onkeypress="return AllowOnlyNumbers(event);" autocomplete="off"
                             placeholder="Enter the amount." />
-                        <span class="errorMsg" id="scssError"><i></i> </span>
-                        </div>
-                        <div class="wizard-form-error"></div>
-                    </div>
-                    <div class="form-group">
-                        <span>- Five-year Post Office Time Deposit (POTD) Scheme (Rs)*</span>
-                        <div class="pos-relative input-icon">
-                        <i class="symbole">₹</i>
-                        <input type="tel" class="form-control wizard-required effect-9" id="potd"
-                            onkeypress="return AllowOnlyNumbers(event);" autocomplete="off"
-                            placeholder="Enter the amount." />
-                        <span class="errorMsg" id="potdError"><i></i> </span>
-                        </div>
-                        <div class="wizard-form-error"></div>
-                    </div>
-                    <p class="po-title">Post office deposits:</p>
-                    <div class="form-group">
-                        <span>Equity Linked Savings Scheme (ELSS) (Rs)</span>
-                        <div class="pos-relative input-icon">
-                        <i class="symbole">₹</i>
-                        <input type="tel" class="form-control wizard-required effect-9" id="elss"
-                            onkeypress="return AllowOnlyNumbers(event);" autocomplete="off"
-                            placeholder="Enter the amount." />
-                        <span class="errorMsg" id="elssError"><i></i> </span>
+                        <span class="errorMsg" id="npsError"><i></i> </span>
                         </div>
                         <div class="wizard-form-error"></div>
                     </div>

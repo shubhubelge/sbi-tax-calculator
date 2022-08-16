@@ -5,6 +5,7 @@ a{text-decoration:none!important;outline:0}
 .container{width:100%;max-width:1680px;padding:0 20px;margin:0 auto}
 .fltr{float:right}
 .fltl{float:left}
+
 .help a{display:inline-block;display:none}
 .message{position:absolute;right:0;top:102px;width:600px;background:#fff;border-radius:8px;padding:20px;z-index:9999;-webkit-box-shadow:0 -3px 8px 0 rgb(0,0,0,.09);box-shadow:0 -3px 8px 0 rgb(0,0,0,.09)}
 .message.open{display:block!important}
@@ -179,6 +180,8 @@ svg{overflow:hidden;vertical-align:middle}
 .progress[data-percentage="30"] .progress-right .progress-bar:before{top:-6px;left:26px}
 .progress[data-percentage="60"] .progress-left .progress-bar:before{top:58px;left:-6px}
 .progress[data-percentage="60"] .progress-right .progress-bar:before{visibility:hidden}
+.progress[data-percentage="80"] .progress-left .progress-bar:before{top:48px;left:-6px}
+.progress[data-percentage="80"] .progress-right .progress-bar:before{visibility:hidden}
 .progress[data-percentage="100"] .progress-left .progress-bar:before{visibility:hidden}
 .progress[data-percentage="100"] .progress-right .progress-bar:before{visibility:hidden}
 /* .form-wizard{padding:0 0 30px} */
@@ -362,6 +365,17 @@ p.para-2{text-align:center;font-size:26px;line-height:38px;font-weight:600;color
 .footer-element ul li img{margin-right:14px;width:70px;height:70px}
 .footer-element p.tc{text-align:center;font:normal normal normal 22px/24px Lato;color:#fff;margin-bottom:0}
 .footer-element p.version{text-align:center;font:normal normal 600 12px/22px Lato;color:#fff;margin-top:36px;margin-bottom:26px}
+.di-none{
+  display: none;
+}
+.child-ele{
+  padding-left: 48px;
+  transition-delay: 1s;
+}
+.po-title{
+  font-size: 22px;
+  line-height: 30px;
+}
 @media (max-width:1600px){
 .message{right:0;top:87px;width:600px}
 .navbar{padding:10px 0}
@@ -422,6 +436,7 @@ img.ui-datepicker-trigger{top:37px!important}
 .stepper-form .shw{position:absolute;bottom:32px;transform:translate(-50%,0);left:100px;font-size:10px;padding:2px 5px}
 .sf-navigation .nav-next img,.sf-navigation .nav-prev img,.sf-navigation .nav-submit img{margin:0}
 .sf-navigation .nav-submit{position:absolute;left:82px;bottom:175px}
+.detail-form-lft{margin:0}
 }
 @media (max-width:991px){
 .stepper-form{padding:61px 0 0}

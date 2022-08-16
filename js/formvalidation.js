@@ -8,7 +8,7 @@ const stepInfo = [
   {
     title: "Deduction Details",
     subtitle: "Next:Deduction Details",
-    progress: "50",
+    progress: "60",
     step: "2/4"
   },
   {
@@ -39,13 +39,26 @@ $(document).ready(function(){
   $('.retirementage').append(optionsRetiment)
 })
 // If user selecting other in Dream
-$(".select-dream").change(function () {
-  if ($(this).val() == "others") {
-    $("#other_dream").addClass("d-block");
-  } else {
-    $("#other_dream").removeClass("d-block");
+// $(".display-sub").input(function () {
+//   console.log($(this).val());
+//   // if ($(this).val() == "others") {
+//   //   $("#other_dream").addClass("d-block");
+//   // } else {
+//   //   $("#other_dream").removeClass("d-block");
+//   // }
+// });
+function checkInput(id) {
+  // console.log("this");
+  let x = $("#"+id).val();
+  let hideId = "#"+id+"Hide";
+  // console.log(hideId);
+  // console.log(x)
+  if(x>0){
+    $("#"+id+"Hide").removeClass('di-none')
+  }else{
+    $("#"+id+"Hide").addClass('di-none')
   }
-});
+}
 // allow number function
 function AllowOnlyNumbers(e) {
   e = e ? e : window.event;
@@ -88,21 +101,13 @@ function checkValidationStepTwo() {
     document.getElementById("lifeInsuError").innerHTML = "Please enter amount.";
     validat = false;
   }
-  let sumLifeInsu = document.forms["hlvform"]["sumLifeInsu"].value.trim();
-  if (sumLifeInsu == "") {
-    document.getElementById("sumLifeInsuError").innerHTML = "Please enter amount.";
-    validat = false;
-  }
+
   let lifeInsuAfter = document.forms["hlvform"]["lifeInsuAfter"].value.trim();
   if (lifeInsuAfter == "") {
     document.getElementById("lifeInsuAfterError").innerHTML = "Please enter amount.";
     validat = false;
   }
-  let sumLifeInsuAfter = document.forms["hlvform"]["sumLifeInsuAfter"].value.trim();
-  if (sumLifeInsuAfter == "") {
-    document.getElementById("lifeInsuAfterError").innerHTML = "Please enter amount.";
-    validat = false;
-  }
+
   let annuityPlan = document.forms["hlvform"]["annuityPlan"].value.trim();
   if (annuityPlan == "") {
     document.getElementById("annuityPlanError").innerHTML = "Please enter amount.";
@@ -113,8 +118,72 @@ function checkValidationStepTwo() {
     document.getElementById("empProviError").innerHTML = "Please enter amount.";
     validat = false;
   }
-  
-  
+  let ppf = document.forms["hlvform"]["ppf"].value.trim();
+  if (ppf == "") {
+    document.getElementById("ppfError").innerHTML = "Please enter amount.";
+    validat = false;
+  }
+  let nsc = document.forms["hlvform"]["nsc"].value.trim();
+  if (nsc == "") {
+    document.getElementById("nscError").innerHTML = "Please enter amount.";
+    validat = false;
+  }
+  let scss = document.forms["hlvform"]["scss"].value.trim();
+  if (scss == "") {
+    document.getElementById("scssError").innerHTML = "Please enter amount.";
+    validat = false;
+  }
+  let potd = document.forms["hlvform"]["potd"].value.trim();
+  if (potd == "") {
+    document.getElementById("potdError").innerHTML = "Please enter amount.";
+    validat = false;
+  }
+  let elss = document.forms["hlvform"]["elss"].value.trim();
+  if (elss == "") {
+    document.getElementById("elssError").innerHTML = "Please enter amount.";
+    validat = false;
+  }
+  return validat;
+}
+function checkValidationStepThree(){
+  let validat = true;
+  let unitLinked = document.forms["hlvform"]["unitLinked"].value.trim();
+  if (unitLinked == "") {
+    document.getElementById("unitLinkedError").innerHTML = "Please enter amount.";
+    validat = false;
+  }
+
+  let homeLoan = document.forms["hlvform"]["homeLoan"].value.trim();
+  if (homeLoan == "") {
+    document.getElementById("homeLoanError").innerHTML = "Please enter amount.";
+    validat = false;
+  }
+
+  let sukanya = document.forms["hlvform"]["sukanya"].value.trim();
+  if (sukanya == "") {
+    document.getElementById("sukanyaError").innerHTML = "Please enter amount.";
+    validat = false;
+  }
+  let fiveYear = document.forms["hlvform"]["fiveYear"].value.trim();
+  if (fiveYear == "") {
+    document.getElementById("fiveYearError").innerHTML = "Please enter amount.";
+    validat = false;
+  }
+  let nabard = document.forms["hlvform"]["nabard"].value.trim();
+  if (nabard == "") {
+    document.getElementById("nabardError").innerHTML = "Please enter amount.";
+    validat = false;
+  }
+  let tuition = document.forms["hlvform"]["tuition"].value.trim();
+  if (tuition == "") {
+    document.getElementById("tuitionError").innerHTML = "Please enter amount.";
+    validat = false;
+  }
+  let nps = document.forms["hlvform"]["nps"].value.trim();
+  if (nps == "") {
+    document.getElementById("npsError").innerHTML = "Please enter amount.";
+    validat = false;
+  }
   return validat;
 }
 function contactInfoValidation() {
@@ -173,7 +242,10 @@ function displayStep(step) {
     $("#sf-step2").removeClass("d-none").addClass(animationDisider);
   } else if (step == 3) {
     $("#sf-step3").removeClass("d-none").addClass(animationDisider);
+  } else if (step == 4) {
+    $("#sf-step4").removeClass("d-none").addClass(animationDisider);
   }
+  
 }
 
 $(".next-btn-fun").on("click", function (e) {
@@ -197,8 +269,16 @@ $(".next-btn-fun").on("click", function (e) {
       displayStep(step);
     }
   } else if (step == 3) {
-    step++;
+    // validation function of true send to next
     $("#sf-step3").removeClass("d-none");
+    let validateForm = checkValidationStepThree();
+    if (validateForm) {
+      step++;
+      displayStep(step);
+    }
+  } else if (step == 4) {
+    step++;
+    $("#sf-step4").removeClass("d-none");
   }
   console.log(step);
 });
