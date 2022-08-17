@@ -178,9 +178,13 @@ svg{overflow:hidden;vertical-align:middle}
 .progress .progress-bar:before{content:"";position:absolute;right:20px;width:8px;height:8px;background:#fff;-webkit-border-radius:50%;border-radius:50%}
 .progress[data-percentage="30"] .progress-left .progress-bar:before{visibility:hidden}
 .progress[data-percentage="30"] .progress-right .progress-bar:before{top:-6px;left:26px}
+
+.progress[data-percentage="40"] .progress-left .progress-bar:before{visibility:hidden}
+.progress[data-percentage="40"] .progress-right .progress-bar:before{top:-6px;left:26px}
+
 .progress[data-percentage="60"] .progress-left .progress-bar:before{top:58px;left:-6px}
 .progress[data-percentage="60"] .progress-right .progress-bar:before{visibility:hidden}
-.progress[data-percentage="80"] .progress-left .progress-bar:before{top:48px;left:-6px}
+.progress[data-percentage="80"] .progress-left .progress-bar:before{top:56px;left:-6px}
 .progress[data-percentage="80"] .progress-right .progress-bar:before{visibility:hidden}
 .progress[data-percentage="100"] .progress-left .progress-bar:before{visibility:hidden}
 .progress[data-percentage="100"] .progress-right .progress-bar:before{visibility:hidden}
@@ -210,6 +214,9 @@ input#datepicker{padding-left:33px;font-size:16px;padding-right:15px}
 .form-wizard .form-control{font-weight:400;height:48px!important;color:rgba(0,0,0,.4);background-color:#fff;border:none;width:100%;box-sizing:border-box;border-radius:8px;line-height:48px;padding-left:15px;font-size:18px;outline:0;box-shadow:0 0 20px 0 rgb(0 0 0 / 9%)}
 .text-color{background-size:8px 10px;background:#fff url(../images/lp/arrow-down-new.png) no-repeat right .75rem center;line-height:36px!important}
 .form-group span, .form-group label{text-align:left;display:inherit;font-size:16px;color:#2b2b2b;line-height:20px;margin:0 0 13px}
+.form-group.mb-big label{
+  margin-bottom: 32px;
+}
 .form-wizard .form-control.phone-no{padding-left:56px}
 span.prefix-contry-code{position:absolute;top:50%;transform:translateY(-50%);left:15px;background:#fff;display:inline-block;padding-right:9px;font:normal normal normal 18px/22px Lato;color:#000}
 .from-radio{background:#fff;border-radius:30px;padding:7px;float:left}
@@ -319,7 +326,7 @@ img.ui-datepicker-trigger{top:45px!important}
 .box-edit .income-value input{height:48px;font-size:22px;line-height:27px}
 .box-edit-blue h1{text-align:center;font-size:31px;line-height:34px;font-weight:600;color:#fff;text-transform:capitalize;margin:0;padding:24px 0 38px}
 .graph-edit{vertical-align:top;padding:0;margin:0 auto}
-.graph.graph-edit.finance-garph svg{margin:0 auto}
+.graph.graph-edit.finance-garph svg{margin:0 auto; width: 220px; height: 220px;}
 .finance-garph .finance-garph-cirle-2{width:261px!important;height:261px!important}
 .graph img{max-width:261px}
 .cover-value{background:#00b3ee 0 0 no-repeat padding-box;border-radius:12px;padding:16px 20px 12px}
@@ -369,7 +376,7 @@ p.para-2{text-align:center;font-size:26px;line-height:38px;font-weight:600;color
   display: none;
 }
 .child-ele{
-  padding-left: 48px;
+  padding-left: 24px;
   transition-delay: 1s;
 }
 .po-title{
@@ -398,6 +405,7 @@ p.para-2{text-align:center;font-size:26px;line-height:38px;font-weight:600;color
 .steps-details .top-title2{font-size:14px}
 .progress{width:58px;height:58px}
 .finance-detail{margin:0}
+.progress[data-percentage="80"] .progress-left .progress-bar:before{top:48px;left:-6px}
 }
 @media (max-width:1280px){
 .how-well{padding:0 0 128px}
@@ -644,7 +652,7 @@ input[type=date]::-webkit-calendar-picker-indicator{position:absolute;left:-20px
 input::-webkit-datetime-edit-fields-wrapper{position:relative;left:0}
 .detail-form-rgt #spouseHideShow.form-group{margin-top:35px}
 }
-svg{width:300px}
+/* svg{width:300px} */
 .svg-text-center{color:#fff;font-weight:600;font-size:24px;color:#e0f6fd46}
 .animated_path{stroke-dasharray:500;stroke-dashoffset:1000;animation:dash 2s;animation-fill-mode:both}
 @keyframes dash{

@@ -8,6 +8,12 @@ const stepInfo = [
   {
     title: "Deduction Details",
     subtitle: "Next:Deduction Details",
+    progress: "40",
+    step: "2/4"
+  },
+  {
+    title: "Post Office Deposits Details",
+    subtitle: "Next:Deduction Details",
     progress: "60",
     step: "2/4"
   },
@@ -118,6 +124,11 @@ function checkValidationStepTwo() {
     document.getElementById("empProviError").innerHTML = "Please enter amount.";
     validat = false;
   }
+
+  return validat;
+}
+function checkValidationStepThree(){
+  let validat = true;
   let ppf = document.forms["hlvform"]["ppf"].value.trim();
   if (ppf == "") {
     document.getElementById("ppfError").innerHTML = "Please enter amount.";
@@ -145,7 +156,7 @@ function checkValidationStepTwo() {
   }
   return validat;
 }
-function checkValidationStepThree(){
+function checkValidationStepFour(){
   let validat = true;
   let unitLinked = document.forms["hlvform"]["unitLinked"].value.trim();
   if (unitLinked == "") {
@@ -186,6 +197,8 @@ function checkValidationStepThree(){
   }
   return validat;
 }
+
+
 function contactInfoValidation() {
   var count = 0;
   // debugger;
@@ -244,7 +257,10 @@ function displayStep(step) {
     $("#sf-step3").removeClass("d-none").addClass(animationDisider);
   } else if (step == 4) {
     $("#sf-step4").removeClass("d-none").addClass(animationDisider);
+  } else if (step == 5) {
+    $("#sf-step5").removeClass("d-none").addClass(animationDisider);
   }
+
   
 }
 
@@ -272,6 +288,14 @@ $(".next-btn-fun").on("click", function (e) {
     // validation function of true send to next
     $("#sf-step3").removeClass("d-none");
     let validateForm = checkValidationStepThree();
+    if (validateForm) {
+      step++;
+      displayStep(step);
+    }
+  }else if (step == 4) {
+    // validation function of true send to next
+    $("#sf-step4").removeClass("d-none");
+    let validateForm = checkValidationStepFour();
     if (validateForm) {
       step++;
       displayStep(step);

@@ -49,7 +49,7 @@
       </div>
     </nav>
     <main role="main">
-      <section class="stepper-form" id="allcalculate">
+      <section class="stepper-form " id="allcalculate">
         <div class="inner-container">
           <div class="steps-details">
             <div class="inner-container">
@@ -76,8 +76,8 @@
                 <div class="form-wizard padding-bottom-tree">
                   <div class="detail-form clearfix">
                     <div class="detail-form-lft fltl">
-                      <div class="form-group">
-                        <span>Age*</span>
+                      <div class="form-group mb-big">
+                        <label>Age*</label>
                         <div class="pos-relative">
                           <select class="form-control wizard-required effect-9 custom-select text-color option-age"
                             name="ageinput" aria-label="Default select example" required>
@@ -150,7 +150,7 @@
                         <div class="wizard-form-error"></div>
                     </div>
                     <div class="form-group child-ele di-none" id="lifeInsuAfterHide">
-                        <span>- Total Sum Assured Amount for policy issued after 1April2012 (Rs)*</span>
+                        <label>- Total Sum Assured Amount for policy issued after 1April2012 (Rs)*</label>
                         <div class="pos-relative input-icon">
                             <i class="symbole">₹</i>
                             <input type="tel" class="form-control wizard-required effect-9" id="sumLifeInsuAfter"
@@ -160,8 +160,11 @@
                         </div>
                         <div class="wizard-form-error"></div>
                     </div>
-                    <div class="form-group">
-                        <span>Annuity plans/retirement plans under section 80CCC (Rs)*</span>
+                    
+                </div>
+                <div class="detail-form-rgt fltl">
+                      <div class="form-group mb-big">
+                        <label>Annuity plans/retirement plans under section 80CCC (Rs)*</label>
                         <div class="pos-relative input-icon">
                             <i class="symbole">₹</i>
                             <input type="tel" class="form-control wizard-required effect-9" id="annuityPlan"
@@ -172,7 +175,7 @@
                         <div class="wizard-form-error"></div>
                     </div>
                     <div class="form-group">
-                        <span>Employees' Provident Fund (PF) & Voluntary Provident Fund (VPF) (Rs)*</span>
+                        <label>Employees' Provident Fund (PF) & Voluntary Provident Fund (VPF) (Rs)*</label>
                         <div class="pos-relative input-icon">
                             <i class="symbole">₹</i>
                             <input type="tel" class="form-control wizard-required effect-9" id="empProvi"
@@ -182,65 +185,9 @@
                         </div>
                         <div class="wizard-form-error"></div>
                     </div>
-                </div>
-                <div class="detail-form-rgt fltl">
-                    <p class="po-title">Post office deposits:</p>
-                    <div class="form-group">
-                        <span>- Public Provident Fund (PPF) (Rs)*</span>
-                        <div class="pos-relative input-icon">
-                        <i class="symbole">₹</i>
-                        <input type="tel" class="form-control wizard-required effect-9" id="ppf"
-                            onkeypress="return AllowOnlyNumbers(event);" autocomplete="off"
-                            placeholder="Enter the amount." />
-                        <span class="errorMsg" id="ppfError"><i></i> </span>
-                        </div>
-                        <div class="wizard-form-error"></div>
-                    </div>
-                    <div class="form-group">
-                        <span>- National Savings Certificate (NSC) (Rs)*</span>
-                        <div class="pos-relative input-icon">
-                        <i class="symbole">₹</i>
-                        <input type="tel" class="form-control wizard-required effect-9" id="nsc"
-                            onkeypress="return AllowOnlyNumbers(event);" autocomplete="off"
-                            placeholder="Enter the amount." />
-                        <span class="errorMsg" id="nscError"><i></i> </span>
-                        </div>
-                        <div class="wizard-form-error"></div>
-                    </div>
-                    <div class="form-group">
-                        <span>- Senior Citizen Savings Scheme 2004 (SCSS) (Rs)*</span>
-                        <div class="pos-relative input-icon">
-                        <i class="symbole">₹</i>
-                        <input type="tel" class="form-control wizard-required effect-9" id="scss"
-                            onkeypress="return AllowOnlyNumbers(event);" autocomplete="off"
-                            placeholder="Enter the amount." />
-                        <span class="errorMsg" id="scssError"><i></i> </span>
-                        </div>
-                        <div class="wizard-form-error"></div>
-                    </div>
-                    <div class="form-group">
-                        <span>- Five-year Post Office Time Deposit (POTD) Scheme (Rs)*</span>
-                        <div class="pos-relative input-icon">
-                        <i class="symbole">₹</i>
-                        <input type="tel" class="form-control wizard-required effect-9" id="potd"
-                            onkeypress="return AllowOnlyNumbers(event);" autocomplete="off"
-                            placeholder="Enter the amount." />
-                        <span class="errorMsg" id="potdError"><i></i> </span>
-                        </div>
-                        <div class="wizard-form-error"></div>
-                    </div>
-                    <p class="po-title">Post office deposits:</p>
-                    <div class="form-group">
-                        <span>Equity Linked Savings Scheme (ELSS) (Rs)</span>
-                        <div class="pos-relative input-icon">
-                        <i class="symbole">₹</i>
-                        <input type="tel" class="form-control wizard-required effect-9" id="elss"
-                            onkeypress="return AllowOnlyNumbers(event);" autocomplete="off"
-                            placeholder="Enter the amount." />
-                        <span class="errorMsg" id="elssError"><i></i> </span>
-                        </div>
-                        <div class="wizard-form-error"></div>
-                    </div>
+                    
+                    
+                    
                 </div>
               </div>
               
@@ -256,6 +203,86 @@
               <br />
             </fieldset>
             <fieldset class="sf-step d-none" id="sf-step3">
+              <div class="finance-detail clearfix d-flex">
+                <div class="detail-form-lft fltl">
+                  <div class="form-group">
+                    <span>- Public Provident Fund (PPF) (Rs)*</span>
+                    <div class="pos-relative input-icon">
+                    <i class="symbole">₹</i>
+                    <input type="tel" class="form-control wizard-required effect-9" id="ppf"
+                        onkeypress="return AllowOnlyNumbers(event);" autocomplete="off"
+                        placeholder="Enter the amount." />
+                    <span class="errorMsg" id="ppfError"><i></i> </span>
+                    </div>
+                    <div class="wizard-form-error"></div>
+                </div>
+                <div class="form-group">
+                    <span>- National Savings Certificate (NSC) (Rs)*</span>
+                    <div class="pos-relative input-icon">
+                    <i class="symbole">₹</i>
+                    <input type="tel" class="form-control wizard-required effect-9" id="nsc"
+                        onkeypress="return AllowOnlyNumbers(event);" autocomplete="off"
+                        placeholder="Enter the amount." />
+                    <span class="errorMsg" id="nscError"><i></i> </span>
+                    </div>
+                    <div class="wizard-form-error"></div>
+                </div>
+                
+              </div>
+              <div class="detail-form-rgt fltl">
+                <div class="form-group">
+                  <span>- Senior Citizen Savings Scheme 2004 (SCSS) (Rs)*</span>
+                  <div class="pos-relative input-icon">
+                  <i class="symbole">₹</i>
+                  <input type="tel" class="form-control wizard-required effect-9" id="scss"
+                      onkeypress="return AllowOnlyNumbers(event);" autocomplete="off"
+                      placeholder="Enter the amount." />
+                  <span class="errorMsg" id="scssError"><i></i> </span>
+                  </div>
+                  <div class="wizard-form-error"></div>
+              </div>
+              <div class="form-group">
+                  <span>- Five-year Post Office Time Deposit (POTD) Scheme (Rs)*</span>
+                  <div class="pos-relative input-icon">
+                  <i class="symbole">₹</i>
+                  <input type="tel" class="form-control wizard-required effect-9" id="potd"
+                      onkeypress="return AllowOnlyNumbers(event);" autocomplete="off"
+                      placeholder="Enter the amount." />
+                  <span class="errorMsg" id="potdError"><i></i> </span>
+                  </div>
+                  <div class="wizard-form-error"></div>
+              </div>
+ 
+              </div>
+              </div>
+              <div class="finance-detail clearfix d-flex">
+                <div class="detail-form-lft fltl">
+                <br>
+                  <div class="form-group">
+                    <span>Equity Linked Savings Scheme (ELSS) (Rs)</span>
+                    <div class="pos-relative input-icon">
+                    <i class="symbole">₹</i>
+                    <input type="tel" class="form-control wizard-required effect-9" id="elss"
+                        onkeypress="return AllowOnlyNumbers(event);" autocomplete="off"
+                        placeholder="Enter the amount." />
+                    <span class="errorMsg" id="elssError"><i></i> </span>
+                    </div>
+                    <div class="wizard-form-error"></div>
+                </div>
+                </div>
+              </div>
+              <br />
+              <div class="button-position-fixed">
+                <div class="d-flex justify-content-between ">
+                  <button class="btn new-prev-btn prev-btn-fun"><img class="new-prev-btn-img"
+                      src="images/lp/btn-arrrow.svg"> Prev </button>
+                  <button class="btn new-next-btn next-btn-fun">Next <img class="new-next-btn-img"
+                      src="images/lp/btn-arrrow.svg"></button>
+                </div>
+              </div>
+              <br />
+            </fieldset>
+            <fieldset class="sf-step d-none" id="sf-step4">
               <div class="finance-detail clearfix d-flex">
                 <div class="detail-form-lft fltl">
                     <div class="form-group">
@@ -280,7 +307,7 @@
                         </div>
                         <div class="wizard-form-error"></div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mb-big">
                         <label for="sukanya">Sukanya Samriddhi Account (Rs)</label>
                         <div class="pos-relative input-icon">
                             <i class="symbole">₹</i>
@@ -351,7 +378,7 @@
               </div>
               <br />
             </fieldset>
-            <fieldset class="sf-step d-none" id="sf-step4">
+            <fieldset class="sf-step d-none" id="sf-step5">
               <div class="button-position-fixed">
                 <div class="d-flex justify-content-between ">
                   <button class="btn new-prev-btn prev-btn-fun"><img class="new-prev-btn-img"
@@ -360,53 +387,55 @@
               </div>
               <div class="box box-blue box-insurance box-insurance-blue">
                 <div class="final-title">
-                  <p> Total Corpus* required at the time of Retirement</p>
+                  <p>After taking into account tax deductions, your taxable income is</p>
                 </div>
                 <!-- -->
                 <div class="graph graph-edit finance-garph">
-                  <div class="row align-items-center">
-                    <div class="col-12 col-lg-4"></div>
-                    <div class="col-12 col-lg-4"><svg viewBox="0 0 300 300">
-                        <path class="shadow_svg" id="background11" fill="none" stroke="#ffffff" stroke-width="15" />
-                        <path class="shadow_svg animated_path" id="arc1-2" fill="none" stroke="#00b3ee"
+                  <div class="row  justify-content-center mt-4">
+                    <div class="col-12 col-lg-4">
+                      <h5 class="text-white">With 80C deduction</h5>
+                      <svg viewBox="0 0 220 220">
+                        <path class="shadow_svg" id="backgroundWith" fill="none" stroke="#ffffff" stroke-width="15" />
+                        <path class="shadow_svg animated_path" id="valueWith" fill="none" stroke="#00b3ee"
                           stroke-linecap="round" stroke-width="15" />
                         <text class="svg-text-center" x="50%" y="45%" dominant-baseline="middle" text-anchor="middle"
                           fill="#fff">₹</text>
                         <text class="svg-text-center value-count" id="count-2" x="50%" y="55%"
-                          dominant-baseline="middle" text-anchor="middle" fill="#ffffff">66,22,000</text>
-                      </svg></div>
-                    <div class="col-12 col-lg-4">
-                      <div class="form-wizard padding-bottom-tree">
-                        <div class="detail-form clearfix">
-                          <div class="detail-form-lft fltl">
-                            <div class="form-group last-inflation-rate m-0">
-                              <span class="text-light mt-0 pt-0">Inflation rate*</span>
-                              <div class="pos-relative">
-                                <select class="form-control wizard-required effect-9 custom-select text-color"
-                                  id="infrate" aria-label="Default select example">
-                                  <option value="0" selected>Select rate</option>
-                                  <option value="4">4%</option>
-                                  <option value="5">5%</option>
-                                  <option value="6">6%</option>
-                                  <option value="7">7%</option>
-                                  <option value="8">8%</option>
-                                </select>
-                                <span class="errorMsg" id="rateError"></span>
-                              </div>
-                              <div class="wizard-form-error"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                          dominant-baseline="middle" text-anchor="middle" fill="#ffffff">5,90,50.0</text>
+                      </svg>
                     </div>
+                    <div class="col-12 col-lg-4">
+                      <h5 class="text-white">Without 80C deduction</h5>
+
+                      <svg viewBox="0 0 220 220">
+                        <path class="shadow_svg" id="backgroundWithout" fill="none" stroke="#ffffff" stroke-width="15" />
+                        <path class="shadow_svg animated_path" id="valueWithout" fill="none" stroke="#00b3ee"
+                          stroke-linecap="round" stroke-width="15" />
+                        <text class="svg-text-center" x="50%" y="45%" dominant-baseline="middle" text-anchor="middle"
+                          fill="#fff">₹</text>
+                        <text class="svg-text-center value-count" id="count-2" x="50%" y="55%"
+                          dominant-baseline="middle" text-anchor="middle" fill="#ffffff">10,000</text>
+                      </svg>
+                    </div>
+                    
                   </div>
-                  <p style="color:#8eff02" class="d-block">Rs. Two Lakh Thirty Three Thousand Three Hundred Forty Nine
+                  <p class="text-white d-block mt-4">Total tax deduction received u/s 80C, 80CCC & 80CCD <br> <strong>With 80C deduction<span class="eduLoanAmount"
+                    style="color:yellow;"> 15,41,343</span> Without 80C deduction <span class="eduLoanAmount"
+                    style="color:yellow;">15,41,343</span></strong> 
                   </p>
-                
-                  <p class="text-danger achive_need_to">You need a corpus* of Rs. <span class="monthly_req_amt">3,289</span>/- at the time of Retirement for a <span class="monthly_req_amt">Luxury</span>/-  post retirement Lifestyle.</p>
+                  
+                  <p class="text-white d-block mt-4">You effective tax rate is  <br> <strong>With 80C deduction<span class="eduLoanAmount"
+                    style="color:red;"> 0.00%</span> Without 80C deduction <span class="eduLoanAmount"
+                    style="color:red;">0.00%</span></strong> 
+                  </p>
+                  <p class="text-white d-block mt-4">The net tax payable is <br> <strong>With 80C deduction<span class="eduLoanAmount"
+                    style="color:yellow;"> Rs. 0</span> Without 80C deduction <span class="eduLoanAmount"
+                    style="color:yellow;">Rs. 0</span></strong> 
+                  </p>
+                  <!-- <p class="text-danger achive_need_to">You need a corpus* of Rs. <span class="monthly_req_amt">3,289</span>/- at the time of Retirement for a <span class="monthly_req_amt">Luxury</span>/-  post retirement Lifestyle.</p>
                   <p class="text-white achive_need_to">Your current savings will cover Rs. <span class="eduLoanAmount"
                     style="color:yellow;">15,41,343</span> i.e. <span class="eduLoanAmount"
-                    style="color:yellow;">1%</span> of your requirement.  </p>
+                    style="color:yellow;">1%</span> of your requirement.  </p> -->
                 </div>
               </div>
               <div class="new-step clearfix">
@@ -479,24 +508,24 @@
             <div class="finance-detail clearfix">
               <div class="finance-detail-rgt">
                 <div class="box box-edit-1 box-edit-blue box-blue">
-                  <h1 class="pb-0">Your Human Life Value</h1>
+                  <h1 class="pb-0">Tax saved is Rs.0</h1>
                   <div class="graph graph-edit finance-garph">
                     <svg viewBox="0 0 300 300">
-                      <path class="shadow_svg" id="background-human" fill="none" stroke="#e0f6fd46" stroke-width="15" />
-                      <path class="shadow_svg animated_path" id="arc22" fill="none" stroke="#FCE200"
+                      <path class="shadow_svg" id="taxSaveBg" fill="none" stroke="#e0f6fd46" stroke-width="15" />
+                      <path class="shadow_svg animated_path" id="taxSaveValue" fill="none" stroke="#FCE200"
                         stroke-linecap="round" stroke-width="15" />
                       <text class="svg-text-center font-weight-bold" x="50%" y="45%" dominant-baseline="middle"
                         text-anchor="middle" fill="white" style="font-size:25px;">₹</text>
                       <text class="svg-text-center font-weight-bold" id="count" x="50%" y="55%"
                         dominant-baseline="middle" text-anchor="middle" fill="white"
-                        style="font-size:25px;">11,11,111</text>
+                        style="font-size:25px;">0</text>
                     </svg>
                   </div>
-                  <div class="cover-value clearfix">
+                  <!-- <div class="cover-value clearfix">
                     <img src="images/lp/smily.svg" alt="" class="">
                     <p><span>Your happiness cover is</span> <span class="cvalue" id="covVal"></span>
                     </p>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -590,6 +619,59 @@
       });
     });
   </script>
+  <script>
+    function polarToCartesian(centerX, centerY, radius, angleInDegrees) {
+        var angleInRadians = (angleInDegrees - 90) * Math.PI / 180.0;
+        return {
+            x: centerX + (radius * Math.cos(angleInRadians)),
+            y: centerY + (radius * Math.sin(angleInRadians))
+        };
+    }
+    function describeArc(x, y, radius, startAngle, endAngle) {
+        // console.log("in drow")
+        var start = polarToCartesian(x, y, radius, endAngle);
+        var end = polarToCartesian(x, y, radius, startAngle);
+        var largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
+        var d = [
+            "M", start.x, start.y,
+            "A", radius, radius, 0, largeArcFlag, 0, end.x, end.y
+        ].join(" ");
+        return d;
+    }
+    window.onload = function () {
+        // console.log("in on load")
+        document.getElementById("taxSaveBg").setAttribute("d", describeArc(150, 150, 95, 0, 359.99));
+        document.getElementById("taxSaveValue").setAttribute("d", describeArc(150, 150, 95, 0, 60));
+
+
+
+        document.getElementById("valueWith").setAttribute("d", describeArc(110, 110, 95, 0, 60));
+        document.getElementById("valueWithout").setAttribute("d", describeArc(110, 110, 95, 0, 95));
+        document.getElementById("backgroundWith").setAttribute("d", describeArc(110, 110, 95, 0, 359.99));
+        document.getElementById("backgroundWithout").setAttribute("d", describeArc(110, 110, 95, 0, 359.99));
+        // $('#count-2').each(function () {
+        //     $(this).prop('Counter', 0).animate({
+        //         Counter: $(this).text()
+        //     }, {
+        //         duration: 2000,
+        //         easing: 'swing',
+        //         step: function (now) {
+        //             $(this).text(0);
+        //         }
+        //     });
+        // });
+        // var count = $(('#count'));
+        // console.log(count.text())
+        // $({ Counter: 0 }).animate({ Counter: count.text() }, {
+        //     duration: 5000,
+        //     easing: 'linear',
+        //     step: function () {
+        //         count.text(Math.ceil(this.Counter) + "*");
+        //     }
+        // });
+
+    };
+</script>
 </body>
 
 </html>
