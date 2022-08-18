@@ -152,8 +152,8 @@ svg{overflow:hidden;vertical-align:middle}
 .progress[data-percentage="80"] .progress-left .progress-bar{animation:loading-3 1.5s linear forwards 1.5s}
 .progress[data-percentage="90"] .progress-right .progress-bar{animation:loading-5 1.5s linear forwards}
 .progress[data-percentage="90"] .progress-left .progress-bar{animation:loading-4 1.5s linear forwards 1.5s}
-.progress[data-percentage="100"] .progress-right .progress-bar{animation:loading-5 1.5s linear forwards}
-.progress[data-percentage="100"] .progress-left .progress-bar{animation:loading-5 1.5s linear forwards 1.5s}
+.progress[data-percentage="100"] .progress-right .progress-bar{animation:loading-5 0.5s linear forwards}
+.progress[data-percentage="100"] .progress-left .progress-bar{animation:loading-5 0.5s linear forwards 1.5s}
 @keyframes loading-1{
 0%{-webkit-transform:rotate(0);transform:rotate(0)}
 100%{-webkit-transform:rotate(36);transform:rotate(36deg)}
@@ -180,7 +180,7 @@ svg{overflow:hidden;vertical-align:middle}
 .progress[data-percentage="30"] .progress-right .progress-bar:before{top:-6px;left:26px}
 
 .progress[data-percentage="40"] .progress-left .progress-bar:before{visibility:hidden}
-.progress[data-percentage="40"] .progress-right .progress-bar:before{top:-6px;left:26px}
+.progress[data-percentage="40"] .progress-right .progress-bar:before{top:-6px;left:24px}
 
 .progress[data-percentage="60"] .progress-left .progress-bar:before{top:58px;left:-6px}
 .progress[data-percentage="60"] .progress-right .progress-bar:before{visibility:hidden}
@@ -376,12 +376,20 @@ p.para-2{text-align:center;font-size:26px;line-height:38px;font-weight:600;color
   display: none;
 }
 .child-ele{
-  padding-left: 24px;
+  /* padding-left: 24px; */
   transition-delay: 1s;
 }
 .po-title{
   font-size: 22px;
   line-height: 30px;
+}
+svg.step-progress-bar {
+  width: 64px;
+  height: 64px;
+}
+.step-progress-bar .svg-text-center{
+  font-size: 17px;
+  font-weight: normal;
 }
 @media (max-width:1600px){
 .message{right:0;top:87px;width:600px}
@@ -395,7 +403,7 @@ p.para-2{text-align:center;font-size:26px;line-height:38px;font-weight:600;color
 .how-well h1{margin-bottom:20px;font:normal normal 600 50px/53px Lato}
 .how-well p{margin-bottom:38px;font:normal normal normal 16px/28px Lato}
 .progress[data-percentage="30"] .progress-right .progress-bar:before{top:-6px;left:24px}
-.progress[data-percentage="60"] .progress-left .progress-bar:before{top:49px;left:-6px}
+.progress[data-percentage="60"] .progress-left .progress-bar:before{top:46px;left:-7px}
 .stepper-form:after{top:73px;height:79px}
 .plans,.stepper-form{padding:72px 0 0}
 .plans{padding-bottom:0}
@@ -405,7 +413,7 @@ p.para-2{text-align:center;font-size:26px;line-height:38px;font-weight:600;color
 .steps-details .top-title2{font-size:14px}
 .progress{width:58px;height:58px}
 .finance-detail{margin:0}
-.progress[data-percentage="80"] .progress-left .progress-bar:before{top:48px;left:-6px}
+.progress[data-percentage="80"] .progress-left .progress-bar:before{top:46px;left:-8px}
 }
 @media (max-width:1280px){
 .how-well{padding:0 0 128px}
@@ -488,6 +496,14 @@ img.ui-datepicker-trigger{top:45px!important}
 .box.box-edit-1.box-edit-blue.box-blue .graph.graph-edit.finance-garph{margin:0 auto;display: flex; flex-direction: column; height: auto; width: 100%;}
 .box.box-edit-1.box-edit-blue.box-blue .graph.graph-edit.finance-garph svg{width:100%}
 .graph svg{width:100%!important}
+
+.form-group.mb-big label{
+  margin-bottom: 7px;
+}
+svg.step-progress-bar {
+  width: 54px;
+  height: 54px;
+}
 }
 .finanavce-new{
   width: 50%;
@@ -513,16 +529,32 @@ img.ui-datepicker-trigger{top:45px!important}
   .padding-small{
     padding: 0 24px;
   }
+  .progress[data-percentage="40"] .progress-right .progress-bar:before {
+    top: -6px;
+    left: 21px;
+}
+  .progress[data-percentage="80"] .progress-left .progress-bar:before {
+    top: 41px;
+    left: -6px;
+}
+span.prefix-contry-code{
+  margin: 0 !important;
+}
 .how-well{background:#e0f6fd url(../images/lp/mobile-home-bg.svg) scroll no-repeat right 0 bottom 0;background-size:cover}
 .progress[data-percentage="30"] .progress-right .progress-bar:before{top:-6px;left:20px}
-.progress[data-percentage="60"] .progress-left .progress-bar:before{top:42px;left:-6px}
+.progress[data-percentage="60"] .progress-left .progress-bar:before{top:42px;left:-8px}
 .stepper-form:after{top:61px;height:71px}
 .steps-details{border-bottom-left-radius:20px;border-bottom-right-radius:20px;margin-bottom:13px}
 .steps-details .top-row{padding:11px 20px}
 .steps-details .top-title{font-size:20px;line-height:22px}
 .progress{width:52px;height:52px}
 .new-step{margin-top:17px;padding-left:0;padding-right:0}
-.finance-detail,.new-step .form-wizard{padding:0 0 22px;border-bottom:none}
+.finance-detail,.new-step .form-wizard{ padding:0 0px 22px;border-bottom:none}
+.finance-detail {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 0;
+}
 .form-wizard .form-control{font-size:16px;line-height:19px;height:45px}
 .form-wizard .form-control::placeholder{font-size:16px}
 .form-group span , .form-group label{font-size:13px;line-height:18px;margin:7px 0;}

@@ -59,13 +59,26 @@
                   <span class="top-title2">Next:Deduction Details</span>
                 </div>
                 <div class="rt">
-                  <div class="progress" data-percentage="30">
+                  <!-- <div class="progress" data-percentage="30">
                     <span class="progress-left"> <span class="progress-bar"></span> </span> <span
                       class="progress-right"> <span class="progress-bar"></span> </span>
                     <div class="progress-value">
-                      <div class="progress-value-text"> 1/4 </div>
+                      <div class="progress-value-text"> 1/5 </div>
                     </div>
-                  </div>
+                  </div> -->
+                  <svg viewBox="0 0 64 64" class="step-progress-bar">
+                    <path class="shadow_svg" id="progressCircle" fill="#ffffff40" stroke="" stroke-width="4" />
+                    <path class="shadow_svg animated_path" id="progressPath" fill="none" stroke="#93D500" stroke-linecap="round" stroke-width="4" >
+                      <!-- <animate id="dash" attributeName="stroke-dashoffset" from="290" to="0" begin="indefinite" dur="6s" fill="freeze" /> -->
+                    </path>
+                    <path class="shadow_svg animated_path" id="progressCircleDot" fill="none" stroke="#ffffff"
+                      stroke-linecap="round" stroke-width="8" />
+                    <text class="svg-text-center" id="progStepText" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+                      fill="#fff">1/5</text>
+                    
+                   <!--  <text class="svg-text-center value-count" id="count-2" x="50%" y="55%"
+                      dominant-baseline="middle" text-anchor="middle" fill="#ffffff">5,90,50.0</text> -->
+                  </svg>
                 </div>
               </div>
             </div>
@@ -647,8 +660,16 @@
 
         document.getElementById("valueWith").setAttribute("d", describeArc(110, 110, 95, 0, 60));
         document.getElementById("valueWithout").setAttribute("d", describeArc(110, 110, 95, 0, 95));
+
         document.getElementById("backgroundWith").setAttribute("d", describeArc(110, 110, 95, 0, 359.99));
         document.getElementById("backgroundWithout").setAttribute("d", describeArc(110, 110, 95, 0, 359.99));
+        
+        document.getElementById("progressCircle").setAttribute("d", describeArc(32, 32, 28, 0, 359.99));
+        document.getElementById("progressPath").setAttribute("d", describeArc(32, 32, 28, 0, 72));
+        document.getElementById("progressCircleDot").setAttribute("d", describeArc(32, 32, 28, 72, 72));
+
+        
+
         // $('#count-2').each(function () {
         //     $(this).prop('Counter', 0).animate({
         //         Counter: $(this).text()

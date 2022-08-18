@@ -2,32 +2,32 @@ const stepInfo = [
   {
     title: "Income Details",
     subtitle: "Next:Financial Details",
-    progress: "30",
-    step:"1/4"
+    progress: "72",
+    step:"1/5"
   },
   {
     title: "Deduction Details",
     subtitle: "Next:Deduction Details",
-    progress: "40",
-    step: "2/4"
+    progress: "144",
+    step: "2/5"
   },
   {
     title: "Post Office Deposits Details",
     subtitle: "Next:Deduction Details",
-    progress: "60",
-    step: "2/4"
+    progress: "216",
+    step: "3/5"
   },
   {
     title: "Deduction Details",
     subtitle: "Next:Result",
-    progress: "80",
-    step: "3/4"
+    progress: "288",
+    step: "4/5"
   },
   {
     title: "Result",
     subtitle: "",
-    progress: "100",
-    step: "4/4"
+    progress: "359.99",
+    step: "5/5"
   },
 ];
 $(document).ready(function(){
@@ -223,12 +223,12 @@ function contactInfoValidation() {
       count++;
   }
 
-  let infrate = document.forms["hlvform"]["infrate"].value.trim();
-  if (infrate == 0) {
-    document.getElementById("rateError").innerHTML =
-      "Please select inflation rate.";
-    validat = false;
-  }
+  // let infrate = document.forms["hlvform"]["infrate"].value.trim();
+  // if (infrate == 0) {
+  //   document.getElementById("rateError").innerHTML =
+  //     "Please select inflation rate.";
+  //   validat = false;
+  // }
   var code = document.forms["hlvform"]["code"].value;
   if (code == "") {
       document.getElementById('codeError').innerHTML = "Please enter vaild code.";
@@ -241,14 +241,22 @@ function contactInfoValidation() {
   }
 }
 var step = 1;
-var animationDisider = ""
+var animationDisider = "";
+// var animation = document.getElementById("dash");
+
+// function showSVG() {
+//   animation.beginElement();
+// }
 function displayStep(step) {
   $(".stepform").find(".sf-step").addClass("d-none").removeClass('animate__slideInRight animate__slideInLeft');
   $('.top-title').text(stepInfo[step-1].title);
   $('.top-title2').text(stepInfo[step-1].subtitle);
-  $('.progress-value-text').text(stepInfo[step-1].step);
-  $('.progress').attr("data-percentage", stepInfo[step-1].progress)
-
+  $('#progStepText').text(stepInfo[step-1].step);
+  // $('.progress').attr("data-percentage", stepInfo[step-1].progress)
+  document.getElementById("progressPath").setAttribute("d", describeArc(32, 32, 28, 0, stepInfo[step-1].progress));
+  document.getElementById("progressCircleDot").setAttribute("d", describeArc(32, 32, 28, stepInfo[step-1].progress, stepInfo[step-1].progress));
+  $("#progressCircleDot").show()
+  // animation.beginElement();
   if (step == 1) {
     $("#sf-step1").removeClass("d-none").addClass(animationDisider);
   } else if (step == 2) {
@@ -259,6 +267,7 @@ function displayStep(step) {
     $("#sf-step4").removeClass("d-none").addClass(animationDisider);
   } else if (step == 5) {
     $("#sf-step5").removeClass("d-none").addClass(animationDisider);
+    $("#progressCircleDot").hide()
   }
 
   
